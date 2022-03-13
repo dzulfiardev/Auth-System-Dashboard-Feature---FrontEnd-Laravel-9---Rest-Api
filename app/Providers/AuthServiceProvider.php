@@ -24,7 +24,7 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // $this->registerPolicies();
+        $this->registerPolicies();
 
         ResetPassword::createUrlUsing(function ($user, string $token) {
             return env('SPA_URL') . '/reset-password?token=' . $token;
