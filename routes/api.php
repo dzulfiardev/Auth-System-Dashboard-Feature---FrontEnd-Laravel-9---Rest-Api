@@ -17,7 +17,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
 	});
 	Route::get('/users/auth', AuthController::class);
 	Route::post('/users/auth/avatar', [AvatarController::class, 'store']);
-	Route::post('/users/auth/update', [AvatarController::class, 'update']);
 });
 
 Route::post('/sanctum/token', TokenController::class);
